@@ -1,5 +1,8 @@
 import React from "react";
 
+import MdGlobe from 'react-ionicons/lib/MdGlobe'
+import LogoGithub from 'react-ionicons/lib/LogoGithub'
+
 class Project extends React.Component {
 constructor(props){
   super(props)
@@ -7,13 +10,13 @@ constructor(props){
     name: "Side Bet Scrambler",
     git: "https://github.com/rayv156/side-bet-scrambler",
     live: "https://side-bet-scrambler.herokuapp.com/",
-    img: "https://i.imgur.com/xe9dEFz.png"
+    img: "https://i.imgur.com/BMy8zJa.png"
   },
   {
     name: "College Football App",
     git: "https://github.com/rayv156/College-Football-App",
     live: "https://rayv156.github.io/College-Football-App/",
-    img: "https://i.imgur.com/rgzrKnv.png"
+    img: "https://i.imgur.com/NeRZOf7.png"
   },
   {
     name: "Tic Tac Toe",
@@ -33,10 +36,14 @@ render() {
 this.state.map((item)=>{
 
   return (
-     <div className="card">
+     <div className="card justify-content-md-center bg-secondary text-white border-light">
+<div className="card-header">
       <h3>{item.name}</h3>
-  <a href={item.git}><h6>{item.git}</h6></a>
-  <a href={item.live}><h6>{item.live}</h6></a>
+      </div>
+      <div className="row justify-content-md-center">
+  <a href={item.git}><button className="btn btn-light"><LogoGithub fontSize="30px" color="black" /></button></a>
+  <a href={item.live}><button className="btn btn-light"><MdGlobe fontSize="30px" color="black" /></button></a>
+        </div>
   
         <img className="center-block" src={item.img} alt=""/>
       
